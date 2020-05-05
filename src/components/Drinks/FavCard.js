@@ -1,8 +1,7 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, Redirect } from 'react-router-dom';
 
-import AuthContext from '../auth/AuthContext';
 import './CSS/cards.css';
 import {apiLocal} from '../config';
 
@@ -11,18 +10,17 @@ import {apiLocal} from '../config';
 
 
 function FavCards({favorits}){
-
-    const {user} = useContext(AuthContext);
     const [redirect, setRedirect] = useState(false);
 
     async function handleDeleteFAv(e){    
         e.preventDefault();
     
-        const res = await axios(apiLocal + '/favorites'  +'/' + favorits.id, {
+        const res = await axios(apiLocal + '/favorites/' + favorits.id, {
                 method : 'DELETE',
             }); 
 
         setRedirect(true);
+        console.log(res);
     };
 
     if (redirect) {

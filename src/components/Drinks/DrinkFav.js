@@ -41,7 +41,7 @@ function DrinkFav(){
                     <div className = "fav-header">
                         <Link to = "./newDrink">
                         <button className = 'new-fav-button'>
-                            <img src="https://img.icons8.com/wired/41/d4674c/add--v2.png"/>
+                            <img alt=''  src="https://img.icons8.com/wired/41/d4674c/add--v2.png"/>
                         </button>
                         </Link>
                         <p>
@@ -55,7 +55,7 @@ function DrinkFav(){
                          : (
                             <div className = "empty">
                                 <div>
-                                <img src="https://img.icons8.com/dusk/200/000000/fragile.png"/>
+                                <img alt=''  src="https://img.icons8.com/dusk/200/000000/fragile.png"/>
                                 </div>
                                 <h2>
                                 It's empty in here.

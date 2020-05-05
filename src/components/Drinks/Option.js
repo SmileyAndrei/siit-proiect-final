@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import {useParams} from 'react-router-dom';
 import axios from 'axios';
 import OptCard from './OptCard';
 
@@ -10,7 +9,6 @@ import {apiPublic} from '../config';
 
 
 function OptionList(){
-    const {drinkCategory} = useParams();
     let [category, setCategory] = useState([]);
 
     useEffect ( () => {
@@ -20,9 +18,7 @@ function OptionList(){
     async function getOption (){
         const res = await axios(apiPublic + '/list.php?c=list');
         setCategory(res.data.drinks);
-    }
-
-    console.log(category);
+    };
     
     return(
         <div  className= "big-contain">

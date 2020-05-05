@@ -17,7 +17,7 @@ function BookCards({withalcool}){
                         {withalcool.strDrink}
                     </div>
                     <div>
-                        <img  className = "drinkPic" src = {withalcool.strDrinkThumb}></img>
+                        <img  className = "drinkPic" alt='' src = {withalcool.strDrinkThumb}></img>
                     </div>
                     
                     <Link to={'/drinks/' + withalcool.idDrink }>

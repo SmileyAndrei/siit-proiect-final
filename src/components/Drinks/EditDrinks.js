@@ -9,7 +9,7 @@ import {apiLocal} from '../config';
 // !!!!!!!!!!!!!!!!!  de aici modifici !!!!!!!!!!!!!!!!!!!!!!
 
 function FavDrinkId(){
-    const {user , setUser} = useContext(AuthContext);
+    const {user} = useContext(AuthContext);
     const {idFav} = useParams();
     const [opt, setOpt] = useState([]);
     const [redirect, setRedirect] = useState(false);
@@ -17,17 +17,6 @@ function FavDrinkId(){
     useEffect(() =>{ 
         getDrinkByUser();
     },[user]);
-
-
-
-    
-
-    // const [formEdit, setFormEdit] = useState({
-    //     strDrink : '',
-    //     strDrinkThumb : '',
-    //     strGlass : '',
-    //     strAlcoholic : '',
-    // });
 
     function handleChange (e) {        
         setOpt ({
@@ -50,6 +39,7 @@ function FavDrinkId(){
                     ...opt,}
         }); 
         setRedirect(true);
+        console.log(res);
     }
 
 

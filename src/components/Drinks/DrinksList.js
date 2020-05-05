@@ -19,13 +19,11 @@ async function getDrinks (){
     const res = await axios(apiPublic + '/filter.php?c=' +category);
     setDrinks(res.data.drinks);
 
-    if (!res.length) {
+    // if (!res.length) {
     
-            console.log('error')
-    }
-}
-
-console.log(drinks);
+    //      console.log('')
+    // }
+};
     
     return(
         <div  className= "container">

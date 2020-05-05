@@ -17,7 +17,7 @@ function SearchDrink({item}){
                         {item.strDrink}
                     </div>
                     <div>
-                        <img  className = "drinkPic" src = {item.strDrinkThumb}></img>
+                        <img alt=''  className = "drinkPic" src = {item.strDrinkThumb}></img>
                     </div>
                     
                     <Link to={'/drinks/' + item.idDrink }>

@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useState, useContext } from 'react'
 import axios from 'axios';
 
 import AuthContext from './AuthContext';
@@ -124,14 +124,14 @@ async function handleSubmit(e) {
 
         <div className = "formauth">
             <div>
-                 <img src="https://img.icons8.com/pastel-glyph/80/515561/groups.png"/>
+                 <img alt=''  src="https://img.icons8.com/pastel-glyph/80/515561/groups.png"/>
                 <h1 className = "title-login">  MEMBER LOGIN </h1>
             </div>
         
         {(globalError ?
         <div className = "auth-error" onClick = {deleteError} >
             <div>
-                <img src="https://img.icons8.com/color/50/000000/close-window.png"/>
+                <img alt=''  src="https://img.icons8.com/color/50/000000/close-window.png"/>
             </div>
             <div>
                 {globalError}
@@ -142,7 +142,7 @@ async function handleSubmit(e) {
         {(succesMess ?
             <div className = "auth-succes" onClick = {deleteError} >
                 <div>
-                <img src="https://img.icons8.com/color/48/000000/checked-radio-button.png"/>
+                <img alt=''  src="https://img.icons8.com/color/48/000000/checked-radio-button.png"/>
                 </div>
                 <div>
                 You have successfully signed in!
@@ -155,7 +155,7 @@ async function handleSubmit(e) {
         <form className = "form" onSubmit = { handleSubmit } >
             <div className = "form-align">
             <div className = "auth-logo">
-            <img src="https://img.icons8.com/material-sharp/30/000000/user.png"/>
+            <img alt=''  src="https://img.icons8.com/material-sharp/30/000000/user.png"/>
             </div>
                 <input 
                     type = "text" 
@@ -172,7 +172,7 @@ async function handleSubmit(e) {
             </div>
             <div className = "form-align" >
                 <div className = "auth-logo">
-                    <img src="https://img.icons8.com/metro/24/000000/lock.png"/>
+                    <img alt=''  src="https://img.icons8.com/metro/24/000000/lock.png"/>
                  </div>
                 <input 
                     type = "password" 
@@ -182,37 +182,14 @@ async function handleSubmit(e) {
                     value = {formData.password}
                     placeholder = "Password"
                 />
-                {/* <div className = "" >
-                {formError.password}
-                </div> */}
-            </div>
-
-            {/* <FormControl  
-            type = "password" 
-            name = "password" 
-            label = "Password" 
-            validation = {{
-                required : true  , 
-                minLength : 6 , 
-                maxLength: 9, 
-                messages: {
-                    required : 'The password is required!',
-                    minLength : 'Your password needs to be beetwin 6 and 9  caracters long'
-                }
-            }} 
-            needValidate = {false}
-            /> */}
-            
-            
+            </div> 
             <button 
                 type = "submit" 
                 className = {'' + (!isPressed ? 'buttonsubmitblock' : 'buttonsubmit')} 
                  disabled = {!isPressed} 
                 >
                 SIGN IN
-            </button>   
-     
-
+            </button> 
         </form>
         )}
         </div>

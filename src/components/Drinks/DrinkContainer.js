@@ -8,7 +8,7 @@ import AuthContext from '../auth/AuthContext';
 import {apiLocal} from '../config';
 
 function DrinkContainer({container}){
-    const {user, setUser} = useContext(AuthContext);
+    const {user} = useContext(AuthContext);
     const [succesMess, setSuccesMess] = useState(false);
     const [error, setError] = useState('');
 
@@ -17,12 +17,13 @@ function DrinkContainer({container}){
         const already = await validateDrink();
 
         if (already) {
-        const res = await axios(apiLocal + '/favorites/' + '' , {
+        const res = await axios(apiLocal + '/favorites/', {
                method : 'POST',
                data : { ...container ,
                userId : user.id }
             });
             setSuccesMess(true);
+            console.log(res);
         }
     };
 

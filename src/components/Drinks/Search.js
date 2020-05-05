@@ -74,7 +74,7 @@ function Search(){
                 <h2>Sorry we don't have this drink .....</h2>
             </div>
             <div className = "cont2 empty">
-            <img src="https://img.icons8.com/color/280/000000/nothing-found.png"/>
+            <img alt=''  src="https://img.icons8.com/color/280/000000/nothing-found.png"/>
             </div>
             </>
         )

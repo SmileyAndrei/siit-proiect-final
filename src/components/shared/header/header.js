@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import {NavLink, useHistory} from 'react-router-dom';
 
 import Dropdown from './HeaderAcc';
@@ -21,16 +21,16 @@ function Header (props) {
         <header>
             <nav className = "js-nav">            
                 <div className = "js-logo">
-                    <img src="https://img.icons8.com/cotton/45/000000/beach-cocktail--v1.png"/>
-                    <img src="https://img.icons8.com/cotton/64/000000/wine.png"/>
-                    <img src="https://img.icons8.com/cotton/64/000000/tea-cup.png"/>
-                    <img src="https://img.icons8.com/cotton/64/000000/beer-glass.png"/>
+                    <img alt=''  src="https://img.icons8.com/cotton/45/000000/beach-cocktail--v1.png"/>
+                    <img alt=''  src="https://img.icons8.com/cotton/64/000000/wine.png"/>
+                    <img alt=''  src="https://img.icons8.com/cotton/64/000000/tea-cup.png"/>
+                    <img alt=''  src="https://img.icons8.com/cotton/64/000000/beer-glass.png"/>
                 </div>
                     <div className = "menu-buttons">
                         <ul className = "js-nav-links">  
                         <li>
                             <NavLink className = "nav-link" activeClassName = "active" exact to ='/searchDrink'>  
-                                <img src="https://img.icons8.com/cotton/40/000000/search--v1.png"/>
+                                <img alt=''  src="https://img.icons8.com/cotton/40/000000/search--v1.png"/>
                             </NavLink>
                         </li>                  
                             <li>
@@ -47,7 +47,7 @@ function Header (props) {
                                     <>
                                         <div className = "logo">
                                             <div>
-                                                <img  src="https://img.icons8.com/wired/35/ffffff/user.png"/>
+                                                <img alt=''  src="https://img.icons8.com/wired/35/ffffff/user.png"/>
                                             </div>
                                             <div className = "nav-link-user">
                                                 Hello {user.username}!

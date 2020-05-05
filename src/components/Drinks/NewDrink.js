@@ -11,7 +11,6 @@ import {apiLocal} from '../config';
 function NewDrink() {
     const [succesMess, setSuccesMess] = useState(false);
     const {user} = useContext(AuthContext);
-    const history = useHistory();
 
 
 
