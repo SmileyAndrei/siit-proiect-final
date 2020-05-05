@@ -1,0 +1,502 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');   
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+
+
+
+.container{
+    display: block;
+    width: 100%;
+    margin: auto;
+
+}
+.cont2{
+   text-align: center;
+   /* background-color: rgba(164, 196, 196, 0.63); */
+}
+
+.cardContainer {
+    display:inline-flex; 
+    justify-content:space-around;
+    padding: 0.6rem;
+    margin: auto;  
+    
+}
+
+.cardText{
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    color: black;
+    font-size: 32px;
+    height: 80px;
+    background-image: radial-gradient(farthest-side at 50% 50%, rgba(255, 174, 0, 0.61), rgba(255, 255, 0, 0), rgba(0, 0, 0, 0))
+    
+}
+
+.card{
+    display: block;
+    font-family: 'Amiri', serif;
+    font-size: 20px;
+    border-radius: 0.7rem;
+    box-shadow: inset 0 0 0 8000px rgba(255, 255, 255, 0.288);
+    width: 350px; 
+    border: #30465554 solid; 
+    border-width: 0.08rem;
+    /* height: 545px; */    
+
+}
+
+
+.drinkPic{
+    width: 250px;
+    margin: 10px;
+    border-radius: 10rem;
+
+}
+
+.drinkCard{
+text-align: center;
+}
+
+.buttonRecip{
+    color: rgba(0, 0, 0, 0.849);
+    background-color: rgba(255, 174, 0, 0.671);
+    width: 230px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 0.5rem;
+    transition-duration: 0.4s;
+    font-family: 'Amatic SC', cursive;
+    font-weight:600;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.buttonRecip:hover{
+    width:235px ;
+    height: 51px;
+    background-color: rgba(65, 64, 59, 0.349);
+}
+
+.buttondelete{
+    border-radius: 70px;
+    height: 40px;
+    width: 40px; 
+    display: inline-flex;
+    
+}
+
+.buttondelete:hover{
+    background-color: rgba(255, 0, 0, 0.103);
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.buttonEdit{
+    border-radius: 70px;
+    height: 40px;
+    width: 40px;
+    display: inline-flex;
+}
+
+.buttonEdit:hover{
+    background-color: rgba(251, 255, 0, 0.185);
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.iconFavorit{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.btn-category{
+    color: #e5d4cd;
+    background-color: #304655;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Righteous', cursive;
+    font-size: 16px;  
+    transition-duration: 0.4s;
+
+}
+
+.btn-category:hover{
+    width: 10.5rem;
+    height: 10.5rem;
+    color: white;
+    background-color: #304655da;
+    box-shadow: 0px 0px 5px 3px #080707a9;
+}
+
+
+.opt-card{    
+    display:inline-flex; 
+    justify-content:space-around;
+    padding: 0.4rem;
+    margin: 0.5rem;      
+}
+
+.small-contain{
+    display: block;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+ }
+
+ .big-contain{
+    display: block;
+    /* width: 80%; */
+    margin: auto;
+    text-align: center;
+    background-image: url("back.png");
+
+}
+   
+.link-button{
+    text-decoration: none;
+
+}
+
+.category-title{
+    font-size: 50px;
+    margin-top: 1rem;
+    font-family: 'Fredericka the Great', cursive;
+
+}
+
+.paragraf{
+    width: 50%;
+    text-align: right;
+    margin-right:5%;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 22px;
+    margin: auto;
+}
+
+.ingredient-small{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 600;
+    font-size: 25px;
+
+}
+
+.ingredient-small div{
+    padding: 0.8rem;
+}
+
+.ingredient-small div h3{
+    font-style: italic;
+}
+
+.ingredient-big {
+    background-color: violet;
+}
+
+.pic-card{
+    color: tomato;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    border-style: groove;
+    border-width: 0.2rem;
+    
+}
+
+.ing-recipe{
+    display: block;
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+.drink-recipe{
+    text-align: center;
+    position: relative;
+}
+.recipe-title{
+    font-family: 'Allura', cursive;
+    font-weight: 500;
+    color: black;
+    font-size: 32px;
+    background-image: radial-gradient(farthest-side at 50% 50%, rgb(251, 255, 0), rgba(255, 255, 0, 0), rgba(0, 0, 0, 0))
+
+}
+
+.recip-button{
+    color: white;
+    background-color: #515561;
+    border: none;
+    width: 100%;
+    height: 2rem;
+    border-radius: 0.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 22px;
+}
+
+.recipe-link{
+    text-decoration: none;
+}
+
+.recip-button:hover{
+    background-color: white;
+    color: black;
+    font-weight: 800;
+}
+.optional{
+    background-color: #515561;
+}
+
+.succes-add{
+    margin-top: 0.1rem;
+    background-color: #27ae5f7a;
+    border: none;
+    width: 100%;
+    height: 2rem;
+    border-radius: 0.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.card-fav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Amiri', serif;
+    font-size: 20px;
+    border-radius: 0.7rem;
+    box-shadow: inset 0 0 0 8000px rgba(255, 255, 255, 0.288);
+    width: 350px; 
+    border: #30465554 solid; 
+    border-width: 0.08rem;
+    height: 545px;
+}
+
+.card-fav-title{
+    font-family: 'Allura', cursive;
+    font-weight: 500;
+    color: black;
+    font-size: 32px;
+    background-color: none;
+    background-image: radial-gradient(farthest-side at 50% 50%, rgba(255, 174, 0, 0.61), rgba(255, 255, 0, 0), rgba(0, 0, 0, 0))
+
+}
+
+.card-fav-text{
+    font-size: 22px;
+    background-color: none;
+    font-family: 'Amatic SC', cursive;
+}
+
+.card-fav-text span{
+    font-style: italic;
+    font-weight: 700;
+}
+
+.drinkPic-fav{
+    width: 250px;
+    margin: 10px;
+    border-radius: 10rem;
+}
+
+.new-fav-button{
+    border: none;
+    background-color: rgba(255, 0, 0, 0);
+}
+
+.new-fav-button:hover{
+    background-color: rgba(199, 177, 177, 0.63);
+    border-radius: 2rem;
+}
+
+.fav-header{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.fav-header p{
+    font-weight: 600;
+    font-size: 26px;
+    font-family: 'Amatic SC', cursive;
+}
+
+.new-fav-title {
+    font-family: 'Megrim', cursive;
+    color:#b28474;
+    font-size: 60px;
+}
+
+.empty{
+    margin-top: 100px;
+    font-size: 24px;
+    color: grey;
+    font-family: 'Amatic SC', cursive;
+}
+.empty div{
+    margin-bottom: 20px;
+}
+
+.empty p{
+    margin-top: 20px;
+}
+
+@media screen and (max-width:768px) {
+
+    .category-title{
+        font-size: 25px;    
+    }
+    .paragraf{
+        margin-right:2.5%;
+        font-size: 15px;
+    }
+    .btn-category{
+        width: 15rem;
+        height: 3rem;
+        border-radius: 1rem;
+        font-size: 16px;    
+    }
+
+    .small-contain{
+        width: 100%;
+        margin-top: 0.6rem;
+     }
+
+     .big-contain{
+        width: 100%;
+    }
+
+    .opt-card{
+        padding: 0.3rem;
+        margin: 0.2rem;      
+    } 
+    
+    .recipe-title{
+        margin-top: 10px;
+        font-weight: 500;
+        font-size: 12px;
+    }
+
+    .ing-recipe{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .ingredient-small{
+        width: 100%;
+        text-align: center;
+        font-family: 'Amatic SC', cursive;
+        font-weight:600;
+        font-size: 18px;
+    
+    }
+
+    .btn-category:hover{
+        width: 16rem;
+        height: 4rem;
+    }
+
+    .cardText{
+        font-weight: 600;
+        font-size: 18px; 
+        width: 150px;  
+        height: 50px;        
+        background-image: radial-gradient(farthest-side at 50% 50%, rgba(255, 174, 0, 0), rgba(255, 255, 0, 0), rgba(0, 0, 0, 0))
+
+    }
+    
+    .card{
+        display: block;
+        display: flexbox;
+        font-size: 20px;
+        width: 300px;
+        height: 100%;
+        align-items: center;
+        /* height: 545px;       */
+    }
+
+    .drinkPic{
+        width: 80px;
+        margin: 10px;
+        border-radius: 1rem;
+        padding-top: 0.2rem;
+    
+    }
+
+    .buttonRecip{
+        width: 80px;
+        height: 25px;
+        font-size: 15px;
+    }
+
+    .card-media{
+        display: flex;
+        flex-direction: row;
+        align-items: center ;
+        justify-content: space-between;
+        padding-right: 1rem;
+        padding-left: 1rem;
+
+    }
+
+    .card-fav{
+        text-align: center;
+        display: flex;
+        flex-direction: wrap;
+        align-content: center;  
+        height: 100%;     
+
+    }
+
+    .drinkPic-fav{
+        width: 150px;
+        margin: 0.1px;
+    }
+
+    .card-fav-text{
+        font-size: 18px;
+    }
+
+    .fav-header{
+        margin-left: 10%;
+    }
+    
+    .fav-header p{
+        display: none;
+    }
+    
+    .new-fav-title {
+        font-size: 18px;
+    }
+
+  
+
+}

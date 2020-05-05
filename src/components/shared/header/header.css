@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Lateef&family=Poppins:ital@1&display=swap');
+
+
+* {
+ margin: 0px;
+ padding: 0px;
+ box-sizing: border-box;
+}
+
+.logo {
+    text-align: center;
+    flex-direction: row;
+    height: 50%;
+}
+
+.menu-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.js-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color:#30465594; */
+    background-image: linear-gradient(#30465594, rgb(168, 167, 167), #30465594);
+    height: 75px;
+    box-shadow: 0 2px 7px 5px rgba(0,0,0,.2);
+    /* margin: 0.5rem; */
+    width: 99%;
+    margin: auto;
+    border-radius: 0.4rem;
+    
+}
+.active{
+  text-shadow: lightblue;
+}
+
+.js-navdoi{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 4rem;
+    background-image: linear-gradient(#30465594, rgb(168, 167, 167), #30465594);
+    margin: 0.5rem;
+    border-radius: 0.4rem;
+
+}
+
+.ul-nav-doi{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 5px;
+    text-decoration: none;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 600;
+    position: relative;
+    transition-duration: 0.8s;
+
+    
+}
+
+.li-nav-doi{
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    background-color: rgba(255, 255, 255, 0.877);
+    margin: 0.5rem;
+    padding: 0.3rem;
+    border-radius: 0.4rem;
+}
+
+.nav-two-logout{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.js-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color:white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 24px;
+
+}
+
+.js-nav-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.js-nav-links li{
+    list-style: none;
+
+}
+
+
+.js-burger{
+    display: none;
+    background-color: rgba(132, 133, 132, 0);
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.js-burger div{
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 7px;
+  border-radius: 2rem;
+}
+
+.js-burger:hover{
+    box-shadow: 0 2px 7px 5px rgba(0,0,0,.2);
+    border-radius: 0.6rem;
+}
+
+.meniu{
+    position: fixed;
+    width: 100%;
+    height:100%;
+    top:0;
+    left: 0;
+    background: rgb(0, 0, 0, 0.3);
+    z-index: 100;
+
+}
+ .side-transition ul{
+     height: 100%;
+     list-style: none;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     text-align: center;
+
+ }
+ .side-transition li{
+     margin: 1rem ;
+ }
+ .side-transition a{
+     text-decoration: none;
+     color:black;
+ }
+
+
+.nav-link{
+    text-decoration: none;
+    color: white;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    font-family: 'Amatic SC', cursive;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition-duration: 0.9s;
+    height: 100%;
+}
+
+.nav-link:hover{
+    background-image: linear-gradient(rgba(168, 167, 167, 0.26), rgba(124, 124, 124, 0), rgba(255, 102, 0, 0.753));
+    border-radius: 0.8rem;
+    /* box-shadow: -1px 12px 79px 20px rgba(0,0,0,0.2); */
+
+}
+
+.nav-link-user{
+    text-decoration: none;
+    color: white;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    font-family: 'Amatic SC', cursive;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.nav-two-logo{
+    display: flex;
+    flex-direction: row;
+    width: 120px;
+    justify-content: space-around;
+
+}
+
+
+
+@media screen and (max-width:1230px) {
+    .js-nav-links{
+        width: 100%;
+     }
+
+     .nav-link{
+         padding: 0px;
+         font-size: 18px;
+     }
+
+     .nav-link-user{
+         padding: 0px;
+         font-size: 18px;
+     }
+   
+
+}
+
+@media screen and (max-width:769px) {
+    
+    .js-burger{
+        display: block;
+    } 
+
+    .js-nav{
+        display: none;
+    }
+
+}
+
+@media screen and (min-width:768px) {
+
+.js-logodoi{
+    display: none;
+}
+
+.js-navdoi{
+    display: none;
+}
+
+.phone-nav ul{
+    display: none;
+}
+
+}

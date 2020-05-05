@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
+
+
+
+.formedittop{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    /* background-color:#FCD0BA; */
+    border-radius: 1rem;
+}
+.formtitle{
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #515561;
+    font-family: 'Megrim', cursive;
+    font-size: 40px;
+;
+
+
+
+}
+.inputbox{
+    display: flex;
+    width: 99%;
+    height: 30px;
+    margin: auto;
+    margin-top: 0.5rem;
+    border: none;
+    background-color:rgba(255, 255, 255, 0);
+    border-bottom: rgba(0, 0, 0, 0.363) solid;
+    border-width: thin;
+    color: #b28474;
+    font-family: 'Abel', sans-serif;
+    font-size: 18px;
+    outline: none ; 
+    padding-left: 0.5rem;
+    
+}
+.inputbox-search{
+    display: flex;
+    width: 350px;
+    height: 30px;
+    margin: auto;
+    margin-top: 0.5rem;
+    border: none;
+    background-color:rgba(255, 255, 255, 0);
+    border-bottom: rgba(0, 0, 0, 0.363) solid;
+    border-width: thin;
+    color: #b28474;
+    font-family: 'Abel', sans-serif;
+    font-size: 18px;
+    outline: none ; 
+    padding-left: 0.5rem;
+    
+}
+
+ 
+.form{
+    padding: 1.5rem;
+    color: #515561;
+}
+
+form div{
+    padding-top: 15px;
+    color: #515561;
+}
+
+form label {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
+}
+
+div:nth-last-child{
+    align-items: center;
+    background-color: tomato;
+}
+
+.buttonsubmitblock{
+    margin-top: 2rem;
+    width: 8rem;
+    height: 2rem;
+    background-color: #51556177;
+    border-style: none;
+    color: white;
+    font-family: 'Abel', sans-serif;
+    font-size: 18px;
+
+}
+
+.buttonsubmit{
+    margin-top: 2rem;
+    width: 8rem;
+    height: 2rem;
+    background-color: #515561;
+    border-style: none;
+    color: white;
+    font-family: 'Abel', sans-serif;
+    font-size: 18px;
+}
+
+.allform{
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    background-color: #68310f28;
+    background: linear-gradient(to left, #51556144, #d6c0b275, #d6c0b273, #b2847480);
+}
+
+
+.formauth{
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    border-radius: 2rem;
+    border: white solid;
+    border-width: 1px;
+    background-color: rgba(255, 255, 255, 0.13);
+    box-shadow: 0px 300px 100px -150px #888888;   
+    
+
+}
+@media screen and (min-width:1024px) {
+    .formauth{
+        width: 35%;
+     }
+   
+
+}
+
+.title-login{
+    color: #515561;
+}
+
+.form-align{
+    display: flex;
+}
+
+.auth-logo{
+    padding-top: 0.6rem;
+    margin-right: 0.6rem;
+    width: 25px;
+}
+.auth-error{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    color: tomato;
+    font-size: 25px;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+    font-family: 'Abel', sans-serif;
+
+
+}
+
+.auth-succes{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    color: #218490;
+    font-size: 25px;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+    font-family: 'Abel', sans-serif;
+
+}
+
+.input-box-error{
+    display: flex;
+    width: 99%;
+    height: 30px;
+    margin: auto;
+    margin-top: 0.5rem;
+    border: none;
+    background-color:rgba(255, 255, 255, 0);
+    border-bottom: rgba(231, 7, 7, 0.651) solid;
+    border-width: thin;
+    color: #b28474;
+    font-family: 'Abel', sans-serif;
+    font-size: 18px;
+    outline: none ; 
+    
+}
+
+.error-message{
+    color: tomato;
+    font-family: 'Abel', sans-serif;
+}
+
+@media screen and (max-width:600px) {
+    .formauth{
+        width: 90%;
+        margin-top: 15px;
+     }
+
+     .auth-succes{
+         font-size: 20px;
+     }
+
+    .formtitle{
+        font-size: 25px;
+        margin-bottom: 0px;
+    }
+
+    .formedittop{
+        margin: 0;
+        margin: auto;
+    }
+
+    .form{
+        padding:0;
+        margin-top: 0rem;
+    }
+
+     
+}
+
+@media screen and (max-width:1230px) {
+    .nav-link{
+        margin-right: 10px;
+    }
+}
