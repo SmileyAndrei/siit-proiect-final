@@ -47,25 +47,21 @@ function Dropdown ({title, items = [] }){
                     
                 </div> 
                 </div>
-                <div>
+                <div className = "js-logo" >
+                    <div>
+                        <NavLink className = "nav-link" activeClassName = "active" exact to ='/searchDrink'>  
+                            <img src="https://img.icons8.com/cotton/40/000000/search--v1.png"/>
+                        </NavLink>
+                    </div>
                     { user ? 
-                        <>
-                            <div className = "js-logo">
-                                <div>
-                                    <NavLink className = "nav-link" activeClassName = "active" exact to ='/searchDrink'>  
-                                        <img src="https://img.icons8.com/cotton/40/000000/search--v1.png"/>
-                                    </NavLink>
-                                </div>
-                                <div className = "logo">
-                                    <div>
-                                        <img  src="https://img.icons8.com/wired/35/ffffff/user.png"/>
-                                    </div>
-                                    <div className = "nav-link-user">
-                                        Hello {user.username}!
-                                    </div>
-                                </div>
+                        <div className = "logo">
+                            <div>
+                                <img  src="https://img.icons8.com/wired/35/ffffff/user.png"/>
                             </div>
-                        </>
+                            <div className = "nav-link-user">
+                                Hello {user.username}!
+                            </div>
+                        </div>
                     : null }
                 </div>
             </div>
