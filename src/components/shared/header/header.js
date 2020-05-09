@@ -47,7 +47,9 @@ function Header (props) {
                                     <>
                                         <div className = "logo">
                                             <div>
-                                                <img alt=''  src="https://img.icons8.com/wired/35/ffffff/user.png"/>
+                                                <NavLink  activeClassName = "active" exact to ='/favorits'>
+                                                    <img alt=''  src="https://img.icons8.com/wired/35/ffffff/user.png"/>
+                                                </NavLink>
                                             </div>
                                             <div className = "nav-link-user">
                                                 Hello {user.username}!

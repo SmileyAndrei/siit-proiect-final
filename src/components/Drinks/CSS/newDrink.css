@@ -24,7 +24,6 @@
  display: flex;
  flex-direction: column;
  align-items: center;
- padding-top: 1rem;
 }
 
 .form-new-drink div{
@@ -43,19 +42,18 @@
     border-radius: 0.4rem;
     font-family: 'Arima Madurai', cursive;
     font-size: 18px;
-    margin-bottom: 1rem;
     box-shadow: -15px -15px 15px #63251f85;
 }
 
 .button-new-drink{
     background-color: #d05146;
     border: none;
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
     margin-top: 1rem;
     border-radius: 5rem;
     color: white;
-    font-size: 25px;
+    font-size: 23px;
     font-family: 'Arima Madurai', cursive;
     box-shadow: 0px 0px 50px #63251f85;
     outline: none;
@@ -64,8 +62,8 @@
 }
 
 .button-new-drink:hover{
-    width: 11rem;
-    height: 11rem;
+    width: 9.5rem;
+    height: 9.5rem;
     border-radius: 7rem;
 
 }
@@ -122,11 +120,19 @@
     }
 
     .button-new-drink{
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 2.5rem;
+        font-size: 13px;
+    }
+
+    .button-new-drink:hover{
         width: 5rem;
         height: 5rem;
         border-radius: 2.5rem;
-        font-size: 15px;
+        font-size: 13px;
     }
+
     .button-drink{
         width: 3rem;
         height: 3rem;

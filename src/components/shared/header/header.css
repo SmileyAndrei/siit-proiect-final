@@ -47,6 +47,7 @@
     background-image: linear-gradient(#30465594, rgb(168, 167, 167), #30465594);
     margin: 0.5rem;
     border-radius: 0.4rem;
+    box-shadow: 0 2px 7px 5px rgba(0,0,0,.2);
 
 }
 

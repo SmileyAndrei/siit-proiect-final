@@ -218,6 +218,7 @@ text-align: center;
     border-radius: 0.5rem;
     border-style: groove;
     border-width: 0.2rem;
+    margin: auto;
     
 }
 
@@ -244,7 +245,7 @@ text-align: center;
 
 .recip-button{
     color: white;
-    background-color: #515561;
+    background-color: #51556186;
     border: none;
     width: 100%;
     height: 2rem;
@@ -457,6 +458,12 @@ text-align: center;
         font-size: 15px;
     }
 
+    .buttonRecip:hover{
+        width:85px ;
+        height: 28px;
+        background-color: rgba(65, 64, 59, 0.349);
+    }
+
     .card-media{
         display: flex;
         flex-direction: row;
@@ -497,6 +504,30 @@ text-align: center;
         font-size: 18px;
     }
 
-  
+    .pic-card{
+        width:70%;
+        
+    }
+
+    .recip-button{
+        width: 70%;
+        margin: auto;
+    }
+
+}
+
+
+
+
+
+@media screen and (max-width:520px) {
+
+.pic-card{
+    width:100%;    
+}
+.recip-button{
+    width: 100%;
+    margin: auto;
+}
 
 }

@@ -34,6 +34,7 @@ function DrinkContainer({container}){
                                 .then(res => res.data);
         if (check.length) {
             setError(true);
+            setSuccesMess(false);
             return false;
         }
         return true;            

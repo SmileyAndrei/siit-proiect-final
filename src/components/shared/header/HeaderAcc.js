@@ -56,7 +56,9 @@ function Dropdown ({title, items = [] }){
                     { user ? 
                         <div className = "logo">
                             <div>
-                                <img  src="https://img.icons8.com/wired/35/ffffff/user.png"/>
+                                <NavLink  activeClassName = "active" exact to ='/favorits'>
+                                    <img  src="https://img.icons8.com/wired/35/ffffff/user.png"/>
+                                </NavLink>
                             </div>
                             <div className = "nav-link-user">
                                 Hello {user.username}!

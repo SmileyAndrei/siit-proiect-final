@@ -58,7 +58,7 @@ function DrinkFav(){
                                 <img alt=''  src="https://img.icons8.com/dusk/200/000000/fragile.png"/>
                                 </div>
                                 <h2>
-                                It's empty in here.
+                                     It's empty in here.
                                 </h2>
                                 <p>
                                     Ooops! Seems like there's nothing in this folder yet.

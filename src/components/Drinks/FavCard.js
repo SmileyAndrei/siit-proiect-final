@@ -36,11 +36,11 @@ function FavCards({favorits}){
                     {favorits.strDrink}
                 </h1>
                 <div>
-                    <Link to={'/drinks/' + favorits.idDrink}>
+                    {/* <Link to={'/drinks/' + favorits.idDrink}> */}
                         <img  className = "drinkPic-fav"
                             src = {favorits.strDrinkThumb}>
                         </img>
-                    </Link>
+                    {/* </Link> */}
                 </div>
                 <div className = "card-fav-text">
                    <span>Category:</span>  {favorits.strCategory}
