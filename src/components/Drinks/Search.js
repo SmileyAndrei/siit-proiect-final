@@ -60,7 +60,7 @@ function Search(){
                     id = "strDrink" 
                     onChange = {inputChange}  
                     value = {formData.password}
-                    placeholder = "Search your drink By name....."
+                    placeholder = "Search your drink by name....."
                     />
                 </div>
                 <div className = "cont2 empty">

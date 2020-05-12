@@ -11,7 +11,7 @@ function DrinksDetails () {
     const [drink , setDrinks] = useState()
 
    async function getDrinksById(id) {
-        const res = await Axios(apiPublic + '/lookup.php?i=' +id);   //   aici ar trebuii sa fac cumva sa mi le vada si pe cele de pe local
+        const res = await Axios(apiPublic + '/lookup.php?i=' +id);  
         setDrinks(res.data.drinks);  
     }
     
