@@ -7,8 +7,6 @@ import './CSS/cards.css';
 
 
 function BookCards({withalcool}){
-
-
     return(
         <div className = "cardContainer">
             <div className = "card">
@@ -19,16 +17,14 @@ function BookCards({withalcool}){
                     <div>
                         <img  className = "drinkPic" alt='' src = {withalcool.strDrinkThumb}></img>
                     </div>
-                    
                     <Link to={'/drinks/' + withalcool.idDrink }>
                          <button className="buttonRecip" type="button">Recipe</button>
                     </Link >
-                    
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 
 export default BookCards;

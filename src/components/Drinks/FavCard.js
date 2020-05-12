@@ -5,31 +5,21 @@ import { Link, Redirect } from 'react-router-dom';
 import './CSS/cards.css';
 import {apiLocal} from '../config';
 
-
-
-
-
 function FavCards({favorits}){
     const [redirect, setRedirect] = useState(false);
 
     async function handleDeleteFAv(e){    
         e.preventDefault();
-    
         const res = await axios(apiLocal + '/favorites/' + favorits.id, {
                 method : 'DELETE',
             }); 
-
         setRedirect(true);
-        console.log(res);
     };
 
     if (redirect) {
         return <Redirect to = "/favorits" />
-    }
-    
-
+    };
     return(
-        <>
         <div className = "cardContainer">            
             <div className = "card-fav">
                 <h1 className = "card-fav-title">
@@ -60,10 +50,9 @@ function FavCards({favorits}){
                     </Link>                    
                 </div>                    
             </div>                        
-        </div>        
-        </>
-    )
-}
+        </div>
+    );
+};
 
 
 export default FavCards;

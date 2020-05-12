@@ -2,10 +2,10 @@ import React, {useContext, useState} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 
-
 import './CSS/cards.css';
 import AuthContext from '../auth/AuthContext';
 import {apiLocal} from '../config';
+
 
 function DrinkContainer({container}){
     const {user} = useContext(AuthContext);
@@ -15,21 +15,18 @@ function DrinkContainer({container}){
     async function AddToFav(e) {
         e.preventDefault();
         const already = await validateDrink();
-
         if (already) {
-        const res = await axios(apiLocal + '/favorites/', {
-               method : 'POST',
-               data : { ...container ,
-               userId : user.id }
-            });
-            setSuccesMess(true);
-            console.log(res);
+            const res = await axios(apiLocal + '/favorites/', {
+                method : 'POST',
+                data : { ...container ,
+                userId : user.id }
+                });
+                setSuccesMess(true);
         }
     };
 
 
-    async function validateDrink(){
-        
+    async function validateDrink(){        
         const check = await axios.get(apiLocal + '/favorites?strDrink=' + container.strDrink)
                                 .then(res => res.data);
         if (check.length) {
@@ -41,10 +38,7 @@ function DrinkContainer({container}){
      };
 
 
-    return(
-
-        <>
-        
+    return(       
         <div className ="drink-recipe">
             <div className = "recipe-title">
                 <h1>____{container.strDrink}____</h1>
@@ -77,7 +71,7 @@ function DrinkContainer({container}){
                     <div>
                         {(succesMess ?   <div className = "succes-add" > This drink it's one of your favorites now 
                                          </div> : null)}
-                        {(error ?   <div className = "succes-add" > Drink already to you favorites 
+                        {(error ?   <div className = "succes-add" > Drink already to your favorites 
                         </div> : null)}
                     </div>
                 </div>
@@ -110,22 +104,12 @@ function DrinkContainer({container}){
                     <div>
                          <h3>----Glass----</h3>
                          {container.strGlass}
-                    </div>
-            
-                </div>
-                
-            </div>
-            
-                             
-        </div>
-        
-        
-    
-
-        </>
-        
-)
-}
+                    </div>            
+                </div>                
+            </div>                
+        </div> 
+    );
+};
 
 
 export default DrinkContainer;

@@ -13,7 +13,7 @@ import { useHistory } from 'react-router-dom';
     
  }
 
-function Register(){
+function Login(){
 
     const [formData, setFormData] = useState ({
         username: '',
@@ -64,22 +64,20 @@ async function handleSubmit(e) {
 
      async function validateUserPass(){
         const checkPas = await axios.get(apiLocal + '/users?password=' + formData.password)
-                               .then(res => res.data);
+                                    .then(res => res.data);
         if (!checkPas.length && await validateUser(false)) {
             setGlobalError(" Please enter a valid password!");
             return false;
-        }
+        };
         return true;
         
- };
+     };
 
    
 
 
     function validateData() {
-
         setIsPressed(false);
-
         const inputs = ['username' , 'password'];
         const allErrors = {...formError};
         let invalidForm = false;
@@ -89,42 +87,35 @@ async function handleSubmit(e) {
             if(!formData[input]) {
                 allErrors[input] = errorMessages[input];
                 invalidForm = true;
-            } 
-        }  
+            };
+        };  
         
         setFormError(allErrors);
         return invalidForm;
     }
 
     function handleInputChange(e) {
-
-        setIsPressed(true);
-        
-      setFormData({
-          ...formData , 
-          [e.currentTarget.id]: e.currentTarget.value
-      });
-
-      const allErrors = {
+        setIsPressed(true);        
+        setFormData({
+            ...formData , 
+            [e.currentTarget.id]: e.currentTarget.value
+        });
+        const allErrors = {
           ...formError, 
           [e.currentTarget.id] : '', 
         };
-
-
-      setFormError(allErrors);
+        setFormError(allErrors);
     }
 
     function deleteError(e){
         setGlobalError('');
         setSuccesMess(false);
-
     };
 
     return(
-
         <div className = "formauth">
             <div>
-                 <img alt=''  src="https://img.icons8.com/pastel-glyph/80/515561/groups.png"/>
+                <img alt=''  src="https://img.icons8.com/pastel-glyph/80/515561/groups.png"/>
                 <h1 className = "title-login">  MEMBER LOGIN </h1>
             </div>
         
@@ -142,10 +133,10 @@ async function handleSubmit(e) {
         {(succesMess ?
             <div className = "auth-succes" onClick = {deleteError} >
                 <div>
-                <img alt=''  src="https://img.icons8.com/color/48/000000/checked-radio-button.png"/>
+                    <img alt=''  src="https://img.icons8.com/color/48/000000/checked-radio-button.png"/>
                 </div>
                 <div>
-                You have successfully signed in!
+                    You have successfully signed in!
                 </div>
             </div>
         : null)}
@@ -154,9 +145,9 @@ async function handleSubmit(e) {
         {(globalError ||succesMess ? null :
         <form className = "form" onSubmit = { handleSubmit } >
             <div className = "form-align">
-            <div className = "auth-logo">
-            <img alt=''  src="https://img.icons8.com/material-sharp/30/000000/user.png"/>
-            </div>
+                <div className = "auth-logo">
+                    <img alt=''  src="https://img.icons8.com/material-sharp/30/000000/user.png"/>
+                </div>
                 <input 
                     type = "text" 
                     className = {'' + (formError.username ? 'input-box-error' : 'inputbox')} 
@@ -165,10 +156,6 @@ async function handleSubmit(e) {
                     value = {formData.username} 
                     placeholder = "Username"
                 />
-                {/* <div className = "" >
-                {formError.username}
-                {formError['no-caracters']}
-                </div> */}
             </div>
             <div className = "form-align" >
                 <div className = "auth-logo">
@@ -186,7 +173,7 @@ async function handleSubmit(e) {
             <button 
                 type = "submit" 
                 className = {'' + (!isPressed ? 'buttonsubmitblock' : 'buttonsubmit')} 
-                 disabled = {!isPressed} 
+                disabled = {!isPressed} 
                 >
                 SIGN IN
             </button> 
@@ -194,7 +181,6 @@ async function handleSubmit(e) {
         )}
         </div>
     );
-
 };
 
-export default Register;
+export default Login;

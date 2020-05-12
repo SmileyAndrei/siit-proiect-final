@@ -1,12 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import OptCard from './OptCard';
 
+import OptCard from './OptCard';
 import '../Drinks/CSS/cards.css'
 import {apiPublic} from '../config';
-
-
-
 
 function OptionList(){
     let [category, setCategory] = useState([]);
@@ -31,9 +28,8 @@ function OptionList(){
                     = {categ}  key = {categ.strCategory} />)
                     : 'Loading ...'}
             </div>
-
         </div>
-    )
-}
+    );
+};
 
 export default OptionList;

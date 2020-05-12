@@ -16,36 +16,35 @@ function Dropdown ({title, items = [] }){
         setUser(null);
         localStorage.removeItem('storageUser');
         history.push('/');
-    } 
+    };
 
     Dropdown.handleClickOutside = () => setOpen(false);
 
     function displayNon(){
         setOpen(false);
-    }
+    };
 
     return(
         <div className = "phone-nav">
             <div className = "js-navdoi">
                 <div className = "nav-two-logo">
-                <button
+                    <button
                     className ="js-burger"
                     onKeyPress = {() => toggle(!open)}
                     onClick = {() => toggle(!open)} 
                     >
-                    <div className = 'js-line-one'>                            
-                    </div>
-                    <div className = "js-line-two">                            
-                    </div>
-                    <div className = "js-line-tree">                            
-                    </div>                           
+                        <div className = 'js-line-one'>                            
+                        </div>
+                        <div className = "js-line-two">                            
+                        </div>
+                        <div className = "js-line-tree">                            
+                        </div>                           
                     </button>                    
-                <div className = "js-logodoi">
-                <NavLink className = "" activeClassName = "active" exact to ='/'>  
-                    <img src="https://img.icons8.com/dotty/40/ffffff/cocktail-shaker.png"/>
-                </NavLink>
-                    
-                </div> 
+                    <div className = "js-logodoi">
+                        <NavLink className = "" activeClassName = "active" exact to ='/'>  
+                            <img src="https://img.icons8.com/dotty/40/ffffff/cocktail-shaker.png"/>
+                        </NavLink>                    
+                    </div> 
                 </div>
                 <div className = "js-logo" >
                     <div>
@@ -76,7 +75,7 @@ function Dropdown ({title, items = [] }){
                    </div>
                    <div>
                         { user ? <NavLink className = "li-nav-doi" activeClassName = "active" exact to ='/favorits'>
-                            My favorites</NavLink> : null }                        
+                            My favorites</NavLink> : null }                      
                     </div>
                     <div className = "nav-two-logout">
                         {( user ? <NavLink className = "li-nav-doi" exact to ='/login' onClick = {handleLogOut} > Log out  </NavLink>
@@ -86,15 +85,16 @@ function Dropdown ({title, items = [] }){
                             </>
                         )}
                     </div>
-                    
                 </div>
             )}
         </div>
     )
 
-}
+};
 
 const onClickOutsideConfig = {
     handleClickOutside : () => Dropdown.handleClickOutside,
 };
+
+
 export default onClickOutside ( Dropdown , onClickOutsideConfig);

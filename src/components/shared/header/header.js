@@ -15,7 +15,7 @@ function Header (props) {
         setUser(null);
         localStorage.removeItem('storageUser');
         history.push('/');
-    }  
+    }; 
 
     return (
         <header>
@@ -28,11 +28,11 @@ function Header (props) {
                 </div>
                     <div className = "menu-buttons">
                         <ul className = "js-nav-links">  
-                        <li>
-                            <NavLink className = "nav-link" activeClassName = "active" exact to ='/searchDrink'>  
-                                <img alt=''  src="https://img.icons8.com/cotton/40/000000/search--v1.png"/>
-                            </NavLink>
-                        </li>                  
+                            <li>
+                                <NavLink className = "nav-link" activeClassName = "active" exact to ='/searchDrink'>  
+                                    <img alt=''  src="https://img.icons8.com/cotton/40/000000/search--v1.png"/>
+                                </NavLink>
+                            </li>                  
                             <li>
                                 <NavLink className = "nav-link" activeClassName = "active" exact to ='/'>  
                                     Home 
@@ -68,15 +68,12 @@ function Header (props) {
                             </li>                                                  
                         </ul> 
                     </div>                          
-                 </nav>  
-            <Dropdown /> 
-            
+                </nav>  
+            <Dropdown />
         </header>
         
-    )
-}
-
-
+    );
+};
 
 
 export default Header;

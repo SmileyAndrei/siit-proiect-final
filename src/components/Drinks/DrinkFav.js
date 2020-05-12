@@ -1,8 +1,8 @@
 import React, {useContext, useEffect, useState} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import FavCard from './FavCard';
 
+import FavCard from './FavCard';
 import AuthContext from '../auth/AuthContext';
 import './fav.css';
 import {apiLocal} from '../config';
@@ -10,17 +10,13 @@ import {apiLocal} from '../config';
 
 
 function DrinkFav(){
-
     const {user} = useContext(AuthContext);
-    let [drink , setDrinks] = useState([]);
-
-    
+    let [drink , setDrinks] = useState([]);    
 
     async function getDrinkByUser() {
         if(!user) {
             return;
-        }
-
+        };
         const res = await axios(apiLocal + '/favorites?userId='+ user.id);
         setDrinks(res.data);          
     };
@@ -30,8 +26,7 @@ function DrinkFav(){
     },[user]);
  
 
-    return (
-         
+    return (         
         <div  className= "container">
             <div  className= "cont2">
                 <div className = "fav-header">
@@ -40,9 +35,9 @@ function DrinkFav(){
                     </h1>
                     <div className = "fav-header">
                         <Link to = "./newDrink">
-                        <button className = 'new-fav-button'>
-                            <img alt=''  src="https://img.icons8.com/wired/41/d4674c/add--v2.png"/>
-                        </button>
+                            <button className = 'new-fav-button'>
+                                <img alt=''  src="https://img.icons8.com/wired/41/d4674c/add--v2.png"/>
+                            </button>
                         </Link>
                         <p>
                             Create a new favorite drink
@@ -51,11 +46,10 @@ function DrinkFav(){
                 </div>
                 {drink.length ? 
                     drink.map(drink => <FavCard favorits
-                         = {drink}  key = {drink.id} />)
-                         : (
-                            <div className = "empty">
+                        = {drink}  key = {drink.id} />)
+                        : ( <div className = "empty">
                                 <div>
-                                <img alt=''  src="https://img.icons8.com/dusk/200/000000/fragile.png"/>
+                                    <img alt=''  src="https://img.icons8.com/dusk/200/000000/fragile.png"/>
                                 </div>
                                 <h2>
                                      It's empty in here.
@@ -66,13 +60,11 @@ function DrinkFav(){
                                 <p>
                                     Tap Create to make your first.
                                 </p>
-                            </div>
-                         )}
+                            </div>)
+                }
             </div>      
         </div>
-    
     )
-
 };
 
 export default DrinkFav;

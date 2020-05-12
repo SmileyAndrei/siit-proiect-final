@@ -1,29 +1,24 @@
 import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import DrinkCards from './DrinksCards';
 
+import DrinkCards from './DrinksCards';
 import './CSS/cards.css'
 import {apiPublic} from '../config';
 
 
 function DrinkList(){
-let [drinks, setDrinks] = useState([]);
-const {category} = useParams()
+    let [drinks, setDrinks] = useState([]);
+    const {category} = useParams()
 
-useEffect ( () => {
-    getDrinks();        
-}, []);
+    useEffect ( () => {
+        getDrinks();        
+    }, []);
 
-async function getDrinks (){
-    const res = await axios(apiPublic + '/filter.php?c=' +category);
-    setDrinks(res.data.drinks);
-
-    // if (!res.length) {
-    
-    //      console.log('')
-    // }
-};
+    async function getDrinks (){
+        const res = await axios(apiPublic + '/filter.php?c=' +category);
+        setDrinks(res.data.drinks);
+    };
     
     return(
         <div  className= "container">
@@ -35,7 +30,7 @@ async function getDrinks (){
             </div>
 
         </div>
-    )
-}
+    );
+};
 
 export default DrinkList;

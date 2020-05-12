@@ -16,8 +16,7 @@ import Search from './Drinks/Search';
 
 
 
-function App () {  
-
+function App () { 
    const [user, setUser] = useState(null);
 
    useEffect(() => {
@@ -28,38 +27,37 @@ function App () {
    }, []);
    
    return (
-      <AuthContext.Provider value={{user, setUser}} >
-            
-            <BrowserRouter style = {{height :'100%'}}>
-               <Header />
-               <Route exact path = "/option/:category">
-                  <DrinkList />
-               </Route>
-               <Route exact path = "/drinks/:drinkId">
-                  <DrinksDetails />
-               </Route>
-               <Route exact path = "/">
-                  <Option />
-               </Route>
-               <Route exact path = "/register">
-                  <Register />
-               </Route>
-               <Route exact path = "/login">
-                  <Login />
-               </Route>
-               <Route exact path = "/favorits">
-                  < DrinkFav />
-               </Route>
-               <Route exact path = "/favorits/:idFav">
-                  < EditDrink />
-               </Route>
-               <Route exact path = "/newDrink">
-                  < NewDrink />
-               </Route>
-               <Route exact path = "/searchDrink">
-                  < Search/>
-               </Route>
-            </BrowserRouter>
+      <AuthContext.Provider value={{user, setUser}} >            
+         <BrowserRouter style = {{height :'100%'}}>
+            <Header />
+            <Route exact path = "/option/:category">
+               <DrinkList />
+            </Route>
+            <Route exact path = "/drinks/:drinkId">
+               <DrinksDetails />
+            </Route>
+            <Route exact path = "/">
+               <Option />
+            </Route>
+            <Route exact path = "/register">
+               <Register />
+            </Route>
+            <Route exact path = "/login">
+               <Login />
+            </Route>
+            <Route exact path = "/favorits">
+               < DrinkFav />
+            </Route>
+            <Route exact path = "/favorits/:idFav">
+               < EditDrink />
+            </Route>
+            <Route exact path = "/newDrink">
+               < NewDrink />
+            </Route>
+            <Route exact path = "/searchDrink">
+               < Search/>
+            </Route>
+         </BrowserRouter>
       </AuthContext.Provider>
    )
 };
